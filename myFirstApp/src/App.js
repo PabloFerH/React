@@ -87,7 +87,8 @@ onSearchChange(event){
     if(!result){return null;}
     return (
       <div className="App">
-
+      "hola buenas tardes"
+      "hola buenas tardes"
         <Search value={searchTerm} onSubmit={this.onSearchSubmit} onChange={this.onSearchChange}>Search</Search>
         { result &&
           <Table list={result.hits} pattern={searchTerm} onDismiss={this.onDismiss}/>
@@ -111,9 +112,10 @@ const Table =  ({list,pattern,onDismiss} ) =>{
   //console.log(list);
     return(
       <div>
+
       {list.map(item =>
 
-            <div key={item.objectID}>
+            <div className='table-row' key={item.objectID}>
               <span><a href={item.url}>{item.title}</a></span>
               <span>{item.author}</span>
               <span>{item.num_comments}</span>
@@ -144,3 +146,4 @@ class OtroSaludo extends Component {
 
 
 export default App;
+export {Button,Search,Table};
